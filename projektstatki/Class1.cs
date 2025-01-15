@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 public class Statki
 {
-    private const int ROZMIAR_PLANSZY = 10;
-    private char[,] plansza;
+    public const int ROZMIAR_PLANSZY = 10;
+    public char[,] plansza;
     private List<Statek> statki;
+
 
     public Statki()
     {
@@ -129,7 +130,10 @@ public class Statki
             Console.Write(i + " ");
             for (int j = 0; j < ROZMIAR_PLANSZY; j++)
             {
-                Console.Write(plansza[i, j] + " ");
+                if(plansza[i, j] == 'X' || plansza[i,j] == 'O')
+                    Console.Write(plansza[i, j] + " ");
+                else
+                    Console.Write("? ");
             }
             Console.WriteLine();
         }
