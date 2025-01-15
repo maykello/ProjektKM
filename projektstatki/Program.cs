@@ -5,8 +5,7 @@
         public static void Main(string[] args)
         {
             Statki statki = new Statki();
-            statki.GenerujStatki();
-           
+            statki.GenerujStatki();           
             statki.WyswietlPlansze();
             Statki statki2 = new Statki();
             statki2.GenerujStatki();
